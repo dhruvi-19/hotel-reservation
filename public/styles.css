@@ -1,0 +1,107 @@
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: min(960px, 92vw);
+  margin: 32px auto;
+  display: grid;
+  gap: 20px;
+}
+
+header {
+  text-align: center;
+}
+
+.panel {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.field-row {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+input,
+button {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 15px;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #334155;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.table-card {
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+}
+
+.table-card.reserved {
+  border-color: #ef4444;
+  background: #fee2e2;
+}
+
+.table-card.available {
+  border-color: #22c55e;
+  background: #dcfce7;
+}
+
+.table-card h3 {
+  margin: 0 0 8px;
+}
+
+.table-card p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.message {
+  min-height: 20px;
+  font-weight: 600;
+}
+
+.message.success {
+  color: #15803d;
+}
+
+.message.error {
+  color: #b91c1c;
+}

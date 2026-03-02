@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Table Reservations</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Hotel Table Reservations</h1>
+        <p>Book tables and see reserved from date/time and available date/time for each table.</p>
+      </header>
+
+      <section class="panel">
+        <h2>Reserve a Table</h2>
+        <form id="reservation-form">
+          <div class="field-row">
+            <label for="tableId">Table Number</label>
+            <input id="tableId" name="tableId" type="number" min="1" max="12" required />
+          </div>
+
+          <div class="field-row">
+            <label for="customerName">Customer Name</label>
+            <input id="customerName" name="customerName" type="text" minlength="2" required />
+          </div>
+
+
+          <div class="field-row">
+            <label for="startTime">Reservation Start Time</label>
+            <input id="startTime" name="startTime" type="datetime-local" required />
+          </div>
+
+          <div class="field-row">
+            <label for="durationMinutes">Duration (minutes)</label>
+            <input id="durationMinutes" name="durationMinutes" type="number" min="15" max="360" value="60" required />
+          </div>
+
+          <button type="submit">Reserve Table</button>
+        </form>
+        <p id="message" class="message"></p>
+      </section>
+
+      <section class="panel">
+        <div class="table-header">
+          <h2>Table Status</h2>
+          <button id="refresh-btn" class="secondary">Refresh</button>
+        </div>
+        <div id="tables-grid" class="grid"></div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
